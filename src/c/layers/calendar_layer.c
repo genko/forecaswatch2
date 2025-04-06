@@ -2,7 +2,7 @@
 #include "c/appendix/config.h"
 #include <time.h>
 
-#define NUM_WEEKS 3
+#define NUM_WEEKS 1
 #define DAYS_PER_WEEK 7
 #define FONT_OFFSET 5
 
@@ -100,7 +100,7 @@ static void calendar_update_proc(Layer *layer, GContext *ctx) {
     float box_h = (float) h / NUM_WEEKS;
 
     // Calculate which box holds today's date
-    const int i_today = config_n_today();
+    const int i_today = 0;
 
     graphics_context_set_fill_color(ctx, today_color());
     graphics_fill_rect(ctx,
@@ -138,7 +138,7 @@ void calendar_layer_refresh() {
     layer_mark_dirty(s_calendar_layer);
 
     // Calculate which box holds today's date
-    const int i_today = config_n_today();
+    const int i_today = 0;
 
     // Fill each box with an appropriate relative day number
     for (int i = 0; i < NUM_WEEKS * DAYS_PER_WEEK; ++i) {

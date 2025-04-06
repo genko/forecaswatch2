@@ -35,8 +35,6 @@ int config_format_time(char *s, size_t maxsize, const struct tm * tm_p);
 
 int config_axis_hour(int hour);
 
-int config_n_today();
-
 GFont config_time_font();
 
 bool config_highlight_holidays();
