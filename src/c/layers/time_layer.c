@@ -30,19 +30,19 @@ static void canvas_update_proc(Layer *layer, GContext *ctx) {
     graphics_draw_line(ctx, start, end);
 
     // Draw seatpost
-    start = GPoint(15+20+12, 15);
+    start = GPoint(15+20+12, 13);
     end = GPoint(65, 50);
     graphics_draw_line(ctx, start, end);
 
     // Draw saddle
     graphics_context_set_stroke_color(ctx, GColorWhite);
-    start = GPoint(15+20+7, 15);
-    end = GPoint(57, 15);
+    start = GPoint(15+20+7-2, 8);
+    end = GPoint(57-2, 8);
     graphics_draw_line(ctx, start, end);
 
     // Draw top tube
     graphics_context_set_stroke_color(ctx, GColorRed);
-    start = GPoint(15+20+14, 23);
+    start = GPoint(15+20+16, 23);
     end = GPoint(85, 23);
     graphics_draw_line(ctx, start, end);
 
@@ -59,9 +59,9 @@ static void canvas_update_proc(Layer *layer, GContext *ctx) {
     graphics_draw_line(ctx, start, end);
 
     // Draw handlebar
-    angle_start = DEG_TO_TRIGANGLE(0);
-    angle_end = DEG_TO_TRIGANGLE(180);
-    GRect rect_bounds = GRect(84, 12, 15, 15);
+    angle_start = DEG_TO_TRIGANGLE(-10);
+    angle_end = DEG_TO_TRIGANGLE(190);
+    GRect rect_bounds = GRect(84, 14, 15, 12);
 
     graphics_context_set_fill_color(ctx, GColorRed);
     graphics_fill_radial(ctx, rect_bounds, GOvalScaleModeFitCircle, 4,
